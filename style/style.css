@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/*
+共通部分
+*/
+html{
+    font-size: 100%;/*ブラウザのデフォルト（16px）になる。*/
+}
+body{
+    font-family: 'Yuji Syuku', serif;
+    line-height:1.7;
+    color:#432;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+/*ヘッダー*/
+.logo{
+    width: 210px;
+    margin-top: 14px;
+}
+
+.main-nav{
+    display: flex;
+    font-size:1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li{
+    margin-left:36px;
+}
+.main-nav a{
+    color:#432;
+}
+.main-nav a:hover{
+    color:#4d3a01b4;
+}
+/*アイコンとナビバーを横並びに*/
+.page-header{
+    display:flex;
+    justify-content:space-between;
+}
+.wrapper{
+    max-width: 1100;
+    margin:0 auto;
+    padding:0 4%;
+}
+/*ホーム画面*/
+.home-content{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* 背景の白色の半透明オーバーレイを追加 */
+    padding: 23px 0px; /* オーバーレイの内側にパディングを追加 */
+    border-radius: 10px; /* オーバーレイの角を丸くする */
+    max-width: 800px;/*オーバーレイの最大幅を制限*/
+    margin: 8% auto;
+    box-sizing:border-box/*パディングを含めて幅を計算する。*/
+}
+.home-content p{
+    font-size: 1.3rem;
+    margin: 10px 0 42px;/*若干、ボタンに対して下の空間を多くする。*/
+    
+}
+/*見出し*/
+.page-title{
+    font-size:5rem;
+    font-family: 'Yuji Syuku', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center; /* テキストを中央揃え */
+}
+/*ボタン*/
+.Button{
+    font-size: 1.375;
+    background: #17930c86;
+    color:#fff;
+    border-radius: 10px;
+    padding: 15px 24px;
+}
+.Button:hover{
+    background-color: #4d3a01b4;;
+}
+.big-bg{
+    background-size:cover;
+    background-position:center top;
+}
+#home{
+    position:relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+#home::before{
+    content:" ";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image: url(../images/bg.jpeg),linear-gradient(#0ec730,#ffffff);
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-position: center top;
+    filter: blur(8px);/*背景をぼかす*/
+    z-index:-1;
+}
+#home .pagetitle{
+    text-transform: none;
+}
