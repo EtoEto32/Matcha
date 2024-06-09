@@ -104,7 +104,7 @@ img{
     background-size: cover;
     background-position: center top;
     filter: blur(8px);/*背景をぼかす*/
-    z-index:-1;
+    z-index:-1;/*背景を背面に*/
 }
 #home .pagetitle{
     text-transform: none;
